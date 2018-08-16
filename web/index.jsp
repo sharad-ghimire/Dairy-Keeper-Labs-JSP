@@ -1,52 +1,40 @@
-<%-- 
-    Document   : index
-    Created on : 09/08/2018, 8:10:27 PM
-    Author     : sharad
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="uts.wsd.*" %><% User user = new User(); %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="uts.wsd.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Index Page</title>
-        <style>
-            .div {
-                width: 500px;
-                padding: 10px;
-                border: 1px solid gray;
-                
-            }
-            </style>
+        <title>Insert title here</title>
     </head>
     <body>
-        <% 
-         //if(session != null) {
-         User loggedUser = (User)session.getAttribute("userLogged");
-           
-            
-            if (loggedUser != null) {
-                 
-            
-           
+        <h1>Diary Keeper</h1>
+        <%
+            User user = (User) session.getAttribute("user");
         %>
-        
-        <h1>Diary Keeper</h1>
-        <div bgcolor="#808080">
-        <p >You are logged in as <%= loggedUser.getName()%> &lt; <%= loggedUser.getEmail()%> &gt; </p>
+
+
+        <% if (user != null) {%>
+
+        <div style="text-align: right; border: solid 1px black;">
+            You are logged in as <%= user.getName()%> &lt;<%= user.getEmail()%>&gt;
         </div>
-        
-        <div style="float: right"><a href="logout.jsp">Logout</a></div>
-        
-        <ul><li><a href="edit_user.jsp">Account<a></li></ul>
-        <%} else {%>
-        
-        <h1>Diary Keeper</h1>
-        <div bgcolor="#808080">
-        <p >You are not logged in </p>
+        <div style="text-align: right;">
+            <a href="logout.jsp">Logout</a>
         </div>
-        <div style="float: right"><a href="register.jsp">Register</a></div>
+        <ul>
+            <li><a href="edit_user.jsp">My Account</a></li>
+        </ul>
+
+        <% } else { %>
+
+        <div style="text-align: right; border: solid 1px black;">
+            You are not logged in
+        </div>
+        <div style="text-align: right;">
+            <a href="login.jsp">Login</a> | <a href="register.jsp">Register</a>
+        </div>
+
         <% }%>
+
     </body>
 </html>

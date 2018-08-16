@@ -1,19 +1,15 @@
-<%-- 
-    Document   : logout
-    Created on : 09/08/2018, 8:25:41 PM
-    Author     : sharad
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Insert title here</title>
     </head>
     <body>
-        
-        <%session.invalidate();%>
+        <%
+            session.invalidate();
+        %>
         <p>You have been logged out. Click <a href="index.jsp">here</a> to return to the main page.</p>
     </body>
 </html>

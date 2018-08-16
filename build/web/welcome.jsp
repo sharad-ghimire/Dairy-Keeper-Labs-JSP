@@ -1,47 +1,50 @@
-<%-- 
-    Document   : welcome
-    Created on : 31/07/2018, 8:24:16 PM
-    Author     : SRD
---%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" import="uts.wsd.*"%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="uts.wsd.*" %><% User user = new User(); %>
 
-<!DOCTYPE html>
+<%
+    String name = request.getParameter("name");
+    String email = request.getParameter("email");
+    String password = request.getParameter("password");
+    String gender = request.getParameter("gender");
+    String favouriteColour = request.getParameter("favcol");
+    String agreeTOS = request.getParameter("tos");
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <%     
-            String check = request.getParameter("tos");
+        <title>Insert title here</title>
+    </head>
+    <body bgcolor="<%= favouriteColour%>">
+
+        <%
+            if (agreeTOS != null) {
+                User user = new User(email, name, password, gender, favouriteColour);
+                session.setAttribute("user", user);
         %>
 
-    </head>
-    <% if(check == null) { %>
-        <body >
-            <p>Sorry, you must agree to the Terms if Service.</p>
-            <p>Click <a href="register.jsp">here</a> to go back.
-        
-       </body>   
-   <% } else {
-            user.setName(request.getParameter("name"));
-            user.setEmail(request.getParameter("email"));
-            user.setPassword(request.getParameter("password"));
-            user.setGender(request.getParameter("gender"));
-            user.setFavColor(request.getParameter("favcol")); 
-            //Session
-            session.setAttribute("userLogged", user);
-   %>
-    <body  bgcolor="<%= user.getFavColor()%>">
-        
-        <p>Welcome, <%= user.getName() %>!</p>
-        <p>Your Email is <%= user.getEmail() %>.</p>
-        <p>Your password is <%= user.getPassword() %>.</p>
-        <p>Your gender is <%= user.getGender() %>.</p>
-        <p>Your favourite colour is <%= user.getFavColor() %>.</p>
-        
+        <p>Welcome, <%= name%>!</p>
+
+        <p>Your Email is <%= email%>.</p>
+
+        <p>Your password is <%= password%>.</p>
+
+        <p>Your gender is <%= gender%>.</p>
+
+        <p>Your favourite colour is <%= favouriteColour%>.</p>
+
         <p>Click <a href="index.jsp">here</a> to proceed to the main page.</p>
-        
+
+        <%
+        } else {
+        %>
+        <p>Sorry, you must agree to the Terms of Services.</p>
+        <p>Click <a href="register.jsp">here</a> to go back.</p>
+        <%
+            }
+        %>
+
     </body>
-   <% } %>
 </html>
