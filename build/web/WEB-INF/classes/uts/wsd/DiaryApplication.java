@@ -7,9 +7,11 @@ package uts.wsd;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 /**
  *
@@ -60,5 +62,26 @@ public class DiaryApplication {
     public void setUsers(Users users) {
         this.users = users;
     }
+    
+    public void saveUsers() throws Exception {
+        JAXBContext jc = JAXBContext.newInstance(Users.class);
+        Marshaller m = jc.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        FileOutputStream fout = new FileOutputStream(filePath);
+        m.marshal(users, fout);
+        fout.close();  
+    }
+    
+     public void updateXML(Users users, String filePath) throws Exception {
+        this.users = users;
+        this.filePath = filePath;
+        JAXBContext jc = JAXBContext.newInstance(Users.class);
+        Marshaller m = jc.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        FileOutputStream fout = new FileOutputStream(filePath);
+        m.marshal(users, fout); //Marsahal those students back to the filePath
+        fout.close();
+    }
+    
     
 }

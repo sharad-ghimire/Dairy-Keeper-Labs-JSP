@@ -9,6 +9,11 @@
     String gender = request.getParameter("gender");
     String favouriteColour = request.getParameter("favcol");
     String agreeTOS = request.getParameter("tos");
+    
+
+    
+
+
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,13 +22,26 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Insert title here</title>
     </head>
+    <%
+        
+        String filePath = application.getRealPath("WEB-INF/users.xml");
+        DiaryApplication dApp = new DiaryApplication();
+        dApp.setFilePath(filePath);
+        Users users = dApp.getUsers();
+        
+              
+        
+        %>
     <body bgcolor="<%= favouriteColour%>">
 
         <%
             if (agreeTOS != null) {
                 User user = new User(email, name, password, gender, favouriteColour);
                 session.setAttribute("user", user);
-               
+                
+                users.addUser(user);
+                dApp.updateXML(users, filePath);
+                
 
         %>
 
