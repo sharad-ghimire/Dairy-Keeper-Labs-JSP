@@ -23,6 +23,8 @@
             if (agreeTOS != null) {
                 User user = new User(email, name, password, gender, favouriteColour);
                 session.setAttribute("user", user);
+               
+
         %>
 
         <p>Welcome, <%= name%>!</p>

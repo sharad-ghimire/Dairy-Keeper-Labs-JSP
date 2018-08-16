@@ -1,15 +1,25 @@
 package uts.wsd;
 
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+//Maps all the java fields to XML element
+@XmlRootElement(name="user")
 public class User implements Serializable {
 	
+        @XmlElement(name = "email")
 	private String email;
+        @XmlElement(name = "name")
 	private String name;
+        @XmlElement(name = "password")
 	private String password;
+        @XmlElement(name = "gender")
 	private String gender;
+        @XmlElement(name = "favouriteColour")
 	private String favouriteColour;
-	public User() {
+	
+        public User() {
 		super();
 	}
 	public User(String email, String name, String password, String gender,
