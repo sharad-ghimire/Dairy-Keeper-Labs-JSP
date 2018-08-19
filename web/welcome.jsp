@@ -10,10 +10,6 @@
     String favouriteColour = request.getParameter("favcol");
     String agreeTOS = request.getParameter("tos");
     
-
-    
-
-
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,14 +24,16 @@
         DiaryApplication dApp = new DiaryApplication();
         dApp.setFilePath(filePath);
         Users users = dApp.getUsers();
-        
-              
-        
+        User anotherUser = users.emailChecker(email);
         %>
+        
     <body bgcolor="<%= favouriteColour%>">
 
         <%
-            if (agreeTOS != null) {
+            if (agreeTOS != null && anotherUser == null) {
+                
+                
+                
                 User user = new User(email, name, password, gender, favouriteColour);
                 session.setAttribute("user", user);
                 
@@ -57,8 +55,12 @@
 
         <p>Click <a href="index.jsp">here</a> to proceed to the main page.</p>
 
-        <%
-        } else {
+        <% } else if (anotherUser != null) { %>
+        
+        <p>Email already used. Click <a href="register.jsp">here</a> to register again! </p>
+        
+        
+       <% } else {
         %>
         <p>Sorry, you must agree to the Terms of Services.</p>
         <p>Click <a href="register.jsp">here</a> to go back.</p>

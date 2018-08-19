@@ -17,12 +17,7 @@
                 <tr><td>Full name</td><td><input type="text" name="name"></td></tr>
                 <tr><td>Password</td><td><input type="password" name="password"></td></tr>
                 <tr><td>Gender</td><td><input type="radio" name="gender" value="male">Male<br><input type="radio" name="gender" value="female">Female</td></tr>
-                <tr><td>Favourite colour</td><td><select name="favcol">
-                            <option>red</option>
-                            <option>green</option>
-                            <option>yellow</option>
-                            <option>pink</option>
-                                </select></td></tr>
+                <tr><td>Favourite colour</td><td><select name="favcol"><option>red</option><option>green</option><option>yellow</option><option>pink</option></select></td></tr>
                 <tr><td>Agree to TOS</td><td><input type="checkbox" name="tos"></td></tr>
                 <tr><td></td><td><input type="submit" value="Register"></td></tr>
             </table>

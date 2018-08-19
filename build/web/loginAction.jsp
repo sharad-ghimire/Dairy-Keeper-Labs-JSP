@@ -25,8 +25,7 @@
 //                dApp = new DiaryApplication();
 //                dApp.setFilePath(filePath);
 //                application.setAttribute("diaryApplication", dApp);
-//            }
-//            
+//            }         
             Users users = dApp.getUsers();           
             String email  = request.getParameter("email");
             String password = request.getParameter("password");
@@ -35,8 +34,8 @@
             
             if (user != null) {
                 %>
-                <p>Login successful. Click <a href="welcome.jsp">here</a> to return to the main page.
-               
+                <p>Login successful. Click <a href="index.jsp">here</a> to return to the main page.
+                    <%session.setAttribute("loggedUser", user);%>
                 <%
             }else{
             

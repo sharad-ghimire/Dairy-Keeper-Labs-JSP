@@ -40,4 +40,14 @@ public class Users implements Serializable {
         }
         return null; // Login incorrect. Return null.
     }
+    
+    //Checks if the email exists
+    public User emailChecker(String email) {
+        // For each user in the list...
+        for (User user : user) {
+            if (user.getEmail().equals(email))
+                return user; 
+        }
+        return null; // Login incorrect. Return null.
+    }
 }
