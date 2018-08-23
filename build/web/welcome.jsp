@@ -31,13 +31,14 @@
 
         <%
             if (agreeTOS != null && anotherUser == null) {
+                
+                
+                
                 User user = new User(email, name, password, gender, favouriteColour);
                 session.setAttribute("user", user);
                 
                 users.addUser(user);
-                dApp.saveUsers(users, filePath);
-//                dApp.updateXML();
-                
+                dApp.updateXML(users, filePath);
                 
 
         %>

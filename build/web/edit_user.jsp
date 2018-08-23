@@ -10,7 +10,6 @@
 
         <%
             User user = (User) session.getAttribute("user");
-            User registeredUser = (User) session.getAttribute("user");
             if (request.getParameter("email") != null) {
                 String name = request.getParameter("name");
                 String email = request.getParameter("email");
