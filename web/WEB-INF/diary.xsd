@@ -19,15 +19,15 @@
     </xs:restriction>
 </xs:simpleType> 
 
- <xs:simpleType name="nameType">
+<xs:simpleType name="nameType">
     <xs:restriction base="xs:string"> 
-        <xs:pattern value="[A-Z][a-z]*[ ]*"/>
+        <xs:pattern value="[A-Z][a-zA-Z ]*"/>
     </xs:restriction>
 </xs:simpleType>  
 
  <xs:simpleType name="emailType"> 
     <xs:restriction base="xs:string">  
-        <xs:pattern value="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}"/>
+        <xs:pattern value="[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}"/>
     </xs:restriction>
 </xs:simpleType> 
 
