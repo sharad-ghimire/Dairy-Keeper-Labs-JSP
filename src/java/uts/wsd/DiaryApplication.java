@@ -63,7 +63,9 @@ public class DiaryApplication {
         this.users = users;
     }
     
-    public void saveUsers() throws Exception {
+    public void saveUsers(Users users, String filePath) throws Exception {
+        this.users = users;
+        this.filePath = filePath;
         JAXBContext jc = JAXBContext.newInstance(Users.class);
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -72,9 +74,8 @@ public class DiaryApplication {
         fout.close();  
     }
     
-     public void updateXML(Users users, String filePath) throws Exception {
-        this.users = users;
-        this.filePath = filePath;
+     public void updateXML() throws Exception {
+
         JAXBContext jc = JAXBContext.newInstance(Users.class);
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

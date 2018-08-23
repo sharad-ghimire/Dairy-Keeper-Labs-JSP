@@ -11,7 +11,6 @@
         <%
             User user = (User) session.getAttribute("user");
             User loggedUser = (User) session.getAttribute("loggedUser");
-            
         %>
 
 
