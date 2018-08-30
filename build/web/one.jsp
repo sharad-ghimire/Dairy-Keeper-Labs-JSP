@@ -53,12 +53,9 @@
 
     <% } else { %>
     <body>
-
         <h1>Register</h1>
-
         <form action="one.jsp" method="POST">
             <input type="hidden" name="submitted" value="yes"/>
-
             <table>
                 <tr><td>Email</td><td><input type="text" name="email"></td></tr>
                 <tr><td>Full name</td><td><input type="text" name="name"></td></tr>
@@ -68,10 +65,7 @@
                 <tr><td>Agree to TOS</td><td><input type="checkbox" name="tos"></td></tr>
                 <tr><td></td><td><input type="submit" value="Register"></td></tr>
             </table>
-
         </form>
-
     </body>
-
     <% }%>
 </html>

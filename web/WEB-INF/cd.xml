@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cd.xsl"?>
+<cd>
+ 
+  <title>A Funk Odyssey</title>
+  <artist>Jamiroquai</artist>
+ 
+  <tracklist>
+    <track id="1">
+      <title>Feels So Good</title>
+      <time>4:38</time>
+      <rating>2</rating>
+    </track>
+ 
+    <track id="2">
+      <title>Little L</title>
+      <time>4:10</time>
+      <rating>5</rating>
+    </track>
+ 
+    <track id="3">
+      <title>You Give Me Something</title>
+      <time>5:02</time>
+      <rating>3</rating>
+    </track>
+ 
+    <track id="4">
+      <title>Corner of the Earth</title>
+      <time>3:57</time>
+      <rating>1</rating>
+    </track>
+  </tracklist>
+ 
+</cd>

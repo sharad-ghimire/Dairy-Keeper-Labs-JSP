@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<diary xmlns="http://www.uts.edu.au/31284/wsd-diary"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary diary.xsd">
+<diary xmlns="http://www.uts.edu.au/31284/wsd-diary" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary diary.xsd">
 
     <profile>
         <name>Sammy Kohg</name>
-        <introduction> 
+        <introduction>  
             Hi, I'm Sammy and I'm an IT student at the University of Technology, Sydney.
             I'm originally from Germany, and I decided to start this diary to practice
             my English.
         </introduction>
         <dob>1/1/2000</dob>
-        <email>Sammy.Kohg@gmail.com</email>   
+        <email>Sammy.Kohg@gmail.com</email>
         <interests>
             <interest>
                 <name>Football</name>
@@ -23,7 +22,6 @@
             </interest>
         </interests>
     </profile>
-    
     <entry>
         <date>15/9/2012</date>
         <title>I bought a new phone</title>
