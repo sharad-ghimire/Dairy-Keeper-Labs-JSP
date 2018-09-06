@@ -37,9 +37,6 @@
                 users.addUser(user);
                 dApp.saveUsers(users, filePath);
 //                dApp.updateXML();
-                
-                
-
         %>
 
         <p>Welcome, <%= name%>!</p>

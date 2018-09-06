@@ -9,14 +9,10 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html"/>
-
-    <!-- TODO customize transformation rules 
-         syntax recommendation http://www.w3.org/TR/xslt 
-    -->
+    
     <xsl:template match="/">
         <html>
             <head>
-                
                 <style>
                     .artist { font-style: italic; margin-bottom: 20px; }
                 </style> 
@@ -41,7 +37,7 @@
     <xsl:template match="/cd/tracklist">
         <table>
             <thead>
-                <tr><th>Title</th><th>Time</th><th>Rating</th></tr>
+                <tr><th>Title</th><th>Time</th><th>Rating</th><th>SHarda</tr>
             </thead>
         <tbody>
              <xsl:apply-templates/>
@@ -56,14 +52,5 @@
     <xsl:template match="/cd/tracklist/track/title | time | rating">
         <td><xsl:apply-templates/></td>
     </xsl:template>
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 </xsl:stylesheet>

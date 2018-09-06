@@ -18,7 +18,6 @@
     <xsl:template match="/">
         <html>
             <head>
-                
                 <style>
                     table.tracklist { border: solid 1px black; border-collapse: collapse; }
    table.tracklist td { border: solid 1px #999; }
@@ -81,19 +80,4 @@
         
         
     </xsl:template>
-    
-<!--    <xsl:template match="/cd/tracklist/track">
-        <td><xsl:apply-templates/></td>
-       
-    </xsl:template>-->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 </xsl:stylesheet>
