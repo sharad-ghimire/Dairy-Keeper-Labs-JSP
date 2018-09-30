@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/labs/Calculator?wsdl" uri="src/conf/xml-resources/web-service-references/Calculator/wsdl/localhost_8080/labs/Calculator.wsdl"/>
+    <system systemId="http://localhost:8080/labs/Calculator?xsd=1" uri="src/conf/xml-resources/web-service-references/Calculator/wsdl/localhost_8080/labs/Calculator.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/labs/Geometry?wsdl" uri="src/conf/xml-resources/web-service-references/Geometry_1/wsdl/localhost_8080/labs/Geometry.wsdl"/>
+    <system systemId="http://localhost:8080/labs/Geometry?xsd=1" uri="src/conf/xml-resources/web-service-references/Geometry_1/wsdl/localhost_8080/labs/Geometry.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/labs/diaryApp?wsdl" uri="src/conf/xml-resources/web-service-references/diaryApp_1/wsdl/localhost_8080/labs/diaryApp.wsdl"/>
+    <system systemId="http://localhost:8080/labs/diaryApp?xsd=1" uri="src/conf/xml-resources/web-service-references/diaryApp_1/wsdl/localhost_8080/labs/diaryApp.xsd_1.xsd"/>
+</catalog>

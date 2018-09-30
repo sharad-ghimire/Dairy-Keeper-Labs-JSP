@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://soap.wsd.uts/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.wsd.uts/">
+
+<xs:element name="circle" type="tns:circle"/>
+
+<xs:element name="getRectangleGeometry" type="tns:getRectangleGeometry"/>
+
+<xs:element name="getRectangleGeometryResponse" type="tns:getRectangleGeometryResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="rectangle" type="tns:rectangle"/>
+
+<xs:complexType name="getRectangleGeometry">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+<xs:element name="arg1" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRectangleGeometryResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rectangle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rectangle">
+<xs:sequence>
+<xs:element name="area" type="xs:double"/>
+<xs:element name="height" type="xs:double"/>
+<xs:element name="perimeter" type="xs:double"/>
+<xs:element name="width" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:circle" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="circle">
+<xs:sequence>
+<xs:element name="area" type="xs:double"/>
+<xs:element name="circumference" type="xs:double"/>
+<xs:element name="diameter" type="xs:double"/>
+<xs:element name="radius" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
